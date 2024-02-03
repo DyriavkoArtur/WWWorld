@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Login</title>
 </head>
 <body>
-    <h2>Registration Form</h2>
+    <h2>Login Form</h2>
     <form action="https://fom.in.ua/echo" method="post">
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br>
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" required><br>
-        <label for="confirm_password">Confirm Password:</label><br>
-        <input type="password" id="confirm_password" name="confirm_password" required><br>
-        <input type="submit" value="Register">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember Me</label><br>
+        <input type="submit" value="Login">
     </form>
 </body>
 </html>
