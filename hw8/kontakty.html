@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Мій сайт</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Головна</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Блог</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Контакти <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Section 1 -->
+    <section class="py-5 text-center bg-light">
+      <div class="container">
+        <h2 class="mb-4">Перша секція Контактів</h2>
+        <p class="lead">Деяка загальна інформація про контакти...</p>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Форма зворотнього зв'язку</h2>
+        <form>
+          <div class="form-group">
+            <label for="fullName">Повне ім'я (ПІБ)</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Введіть ваше ім'я">
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="text" class="form-control" id="phone" placeholder="Введіть ваш номер телефону">
+          </div>
+          <div class="form-group">
+            <label for="email">Пошта</label>
+            <input type="email" class="form-control" id="email" placeholder="Введіть вашу електронну пошту">
+          </div>
+          <div class="form-group">
+            <label for="message">Повідомлення</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Введіть ваше повідомлення"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Надіслати</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer class="py-4 bg-dark text-white text-center">
+    <div class="container">
+      <p>&copy; 2024 Мій сайт</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
