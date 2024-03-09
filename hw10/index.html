@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Tabs</title>
+<style>
+  .tabs-section {
+    margin-top: 20px;
+  }
+
+  .nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+  }
+
+  .nav-link {
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom: none;
+    background-color: transparent;
+  }
+
+  .nav-link.active {
+    border-color: #dee2e6 #dee2e6 #fff;
+  }
+
+  .tab-content {
+    border: 1px solid #dee2e6;
+    padding: 20px;
+  }
+
+  .tab-pane {
+    display: none;
+  }
+
+  .tab-pane.active {
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<section class="tabs-section">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home" data-target="#tab-home" type="button" role="tab">Home</button>
+    <button class="nav-link" id="nav-profile" data-target="#tab-profile" type="button" role="tab">Profile</button>
+    <button class="nav-link" id="nav-contact" data-target="#tab-contact" type="button" role="tab">Contact</button>
+    <button class="nav-link" id="nav-delivery" data-target="#tab-delivery" type="button" role="tab">Delivery</button>
+  </div>
+</section>
+
+<section class="py-rem first-section">
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane active" id="tab-home" role="tabpanel">
+      Home tab content
+    </div>
+    <div class="tab-pane" id="tab-profile" role="tabpanel">
+      Profile tab content
+    </div>
+    <div class="tab-pane" id="tab-contact" role="tabpanel">
+      Contact tab content
+    </div>
+    <div class="tab-pane" id="tab-delivery" role="tabpanel">
+      Delivery tab content
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const tabs = document.querySelectorAll('.nav-link');
+    const tabContents = document.querySelectorAll('.tab-pane');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const target = this.getAttribute('data-target');
+        tabContents.forEach(content => {
+          if (content.getAttribute('id') === target.substring(1)) {
+            content.classList.add('active');
+          } else {
+            content.classList.remove('active');
+          }
+        });
+        tabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
